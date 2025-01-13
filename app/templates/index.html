@@ -5,15 +5,13 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome to the User Management System</h1>
-    {% if user %}
-        <p>Hello, {{ user.username }}!</p>
-        <a href="{{ url_for('edit_profile') }}">Edit Profile</a> |
-        <a href="{{ url_for('logout') }}">Logout</a>
-    {% else %}
-        <a href="{{ url_for('login') }}">Login</a> |
-        <a href="{{ url_for('register') }}">Register</a>
-    {% endif %}
+<div class="container mt-4">
+    <div class="text-center">
+        <h1 class="display-4">Кликер!</h1>
+        <p class="lead">Количество кликов - <span class="badge badge-primary">{{ current user.clicks }}</span></p>
+        <a href="{{ url_for('click') }}" class="btn btn-primary btn-lg">Кнопка</a>
+    </div>
+</div>
 
 </body>
 </html>
